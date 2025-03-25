@@ -44,21 +44,20 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         <ul>
           {sidebarItems.map((item) => (
             <li key={item.label}>
-              <Link href={item.path}>
-                <a 
-                  className={cn(
-                    "flex items-center px-6 py-3 text-sm font-medium",
-                    location === item.path 
-                      ? "bg-[#e0e4f8] text-primary border-l-3 border-primary" 
-                      : "text-gray-medium hover:bg-gray-100"
-                  )}
-                  onClick={() => {
-                    if (isOpen) onClose();
-                  }}
-                >
-                  <i className={`${item.icon} mr-3 text-xl`}></i>
-                  <span>{item.label}</span>
-                </a>
+              <Link 
+                href={item.path}
+                className={cn(
+                  "flex items-center px-6 py-3 text-sm font-medium",
+                  location === item.path 
+                    ? "bg-[#e0e4f8] text-primary border-l-3 border-primary" 
+                    : "text-gray-medium hover:bg-gray-100"
+                )}
+                onClick={() => {
+                  if (isOpen) onClose();
+                }}
+              >
+                <i className={`${item.icon} mr-3 text-xl`}></i>
+                <span>{item.label}</span>
               </Link>
             </li>
           ))}
