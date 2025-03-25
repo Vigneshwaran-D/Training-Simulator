@@ -10,6 +10,7 @@ interface SidebarItem {
 const sidebarItems: SidebarItem[] = [
   { icon: "ri-dashboard-line", label: "Dashboard", path: "/" },
   { icon: "ri-user-line", label: "User Profile", path: "/profile" },
+  { icon: "ri-vidicon-line", label: "Simulation", path: "/simulation" },
   { icon: "ri-graduation-cap-line", label: "Courses", path: "/courses" },
   { icon: "ri-book-mark-line", label: "Library", path: "/library" },
   { icon: "ri-file-chart-line", label: "Reports", path: "/reports" },
